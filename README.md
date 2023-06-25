@@ -13,7 +13,7 @@
   * With Spring Security, Spring Security acts as a layer between request and Dispatcher Servlet. Before Dispatcher Servlet Spring Security intercepts all requests and only after Spring Security checks, authentication and authorization the request sent to Dispatcher Servlet and for further processing to the controllers.
   * As the mentioned above, Spring Security intercepts all request but what it does handle with this requests? Spring Security execute series of filters also called Spring Security Filter Chain.
   * You can figure out more with the looking at the diagrams I left below
-  ![Spring Security.jpg](..%2F..%2FDownloads%2FSpring%20Security.jpg)
+  ![Spring Security](https://github.com/mrtkrkrt/Spring-Security/assets/55550212/66f7353f-a8a2-453b-9129-67c5f87d75a9)
 
 * Spring Security Filters:
   * Authentication: Question -> Is it a valid user?
