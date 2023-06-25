@@ -38,7 +38,7 @@
    * As you can see below picture we have to fill the form. 
      * Username: user
      * Password: When you start the server the security password will appear in console 👇👇
-      ![Console](https://github.com/mrtkrkrt/Spring-Security/assets/55550212/8da50eb5-eed8-4f9c-8f5c-520e7a9806b6=100x200)
+      ![Console](https://github.com/mrtkrkrt/Spring-Security/assets/55550212/8da50eb5-eed8-4f9c-8f5c-520e7a9806b6=10)
      * Default Form 👇👇
 
         ![image](https://github.com/mrtkrkrt/Spring-Security/assets/55550212/ebe78f08-5bc2-4fd8-83a7-724f34cc8054)
