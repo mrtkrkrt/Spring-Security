@@ -31,4 +31,10 @@
   * CORS requests are denied
   * X-Frame-Options is set to 0 
   * ...
-
+  
+1. Form Authentication: 
+   * Provides a default login page
+   * Provides a /logout url
+   * As you can see below picture we have to fill the form. 
+     * Username: user
+     * Password: When you start the server the security password will appear in console 
