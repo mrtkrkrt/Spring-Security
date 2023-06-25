@@ -42,5 +42,13 @@
      * Default Form 👇👇
 
         ![image](https://github.com/mrtkrkrt/Spring-Security/assets/55550212/ebe78f08-5bc2-4fd8-83a7-724f34cc8054)
-
-      
+ 
+2. Basic Authentication:
+    * This is the most basic authentication. Base 64 encoded username and password is sent as request headers
+    * But there is a disadvantages such as easy decoding, header does not contain authorization information, header does not have expire date
+    * Because of this basic authentication not recommend for production use
+    * You can configure auth username and password using [application.properties](src/main/resources/application.properties) file. The configuration is:
+      *   ```
+          spring.security.user.name=murat
+          spring.security.user.password=karakurt
+          ```
