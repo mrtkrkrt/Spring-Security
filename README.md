@@ -52,3 +52,14 @@
           spring.security.user.name=murat
           spring.security.user.password=karakurt
           ```
+3. Cross-Site Request Forgery (CSRF):
+    * Example: You are logged-in to your bank website. You go to a malicious website without logging out. Malicious website executes a bank transfer without your knowledge using cookie.
+    * We have to specify CSRF token when we are using a Post or Put request. You can try this on a simple basic authentication.
+    * How can we avoid this?:
+        1. Synchronizer token pattern: A token created for each request. To make an update, you need a CSRF token from previous request
+        2. SameSite cookie: You can enable same site cookie adding ``` server.servlet.session.cookie.same-site=strict ``` to the [application.properties](src/main/resources/application.properties) file.
+    * To configure this authentications we can use simple line of code. After the create configuration file for security like [BasicSecurityConfiguration](src/main/java/com/springsecurity/demo/configuration/BasicSecurityConfiguration.java)
+      all that's left is to add a few lines of code.
+      * To disable CSRF ```http.csrf().disable()```
+      * To disable form auth  ```http.formLogin()``` 
+      * You can check more on [Spring Security](https://docs.spring.io/spring-security/reference/features/exploits/csrf.html) page
