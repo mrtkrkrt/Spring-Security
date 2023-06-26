@@ -63,3 +63,26 @@
       * To disable CSRF ```http.csrf().disable()```
       * To disable form auth  ```http.formLogin()``` 
       * You can check more on [Spring Security](https://docs.spring.io/spring-security/reference/features/exploits/csrf.html) page
+
+4. Cross-Origin Resource Sharing (CORS): 
+    * Browsers noes not allow AJAX calls to resources outside current origin
+    * CORS is specification that alllows you to configure which domain requests are allowed
+      * Global Configuration: Configure **addCorsMappings** callback method in WebMvcConfigurer. There are 2 ways to do this
+        ```java
+            @Bean
+            public WebMvcConfigurer corsConfigurer() {
+                return new WebMvcConfigurer() {
+                    public void addCorsMappings(CorsRegistry registry) {
+                        registry.addMapping("/**").
+                            allowedMethods("*").
+                            allowedOrigins("http://localhost:3000");
+                    }
+                };
+            }
+        ```
+        What this part of code do? This allow all requests to all URLS's with any of the request methods from this spesific origin
+        **Especially when we are working on full stack application in local. That is definitely inevitable that developer confront with CORS error.**
+      * Local Configuration: This way has more spesific methods for allowing CORS
+        ```@CrossOrigin``` This annotation allows from all origins
+        ```@CrossOrigin(origins = "http://localhost:3000")``` allow from spesific origin
+        
