@@ -83,6 +83,8 @@
         What this part of code do? This allow all requests to all URLS's with any of the request methods from this spesific origin
         **Especially when we are working on full stack application in local. That is definitely inevitable that developer confront with CORS error.**
       * Local Configuration: This way has more spesific methods for allowing CORS
+      
         ```@CrossOrigin``` This annotation allows from all origins
+      
         ```@CrossOrigin(origins = "http://localhost:3000")``` allow from spesific origin
         
