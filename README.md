@@ -88,3 +88,36 @@
       
         ```@CrossOrigin(origins = "http://localhost:3000")``` allow from spesific origin
         
+    
+* User Credentials: 
+  1. In Memory: Until now, we have been configuring our user credentials in our [application.properties](src/main/resources/application.properties) file. This usage called as a Im Memory storage. But this technique only for test purpose, not recommended for production.
+  2. Database: We can use JDBC/JPA to access credentials.
+  3. LDAP:ağ kaynaklarının (kullanıcılar, gruplar, cihazlar, hizmetler vb.) dağıtık bir dizine erişim sağlamak için kullanılan bir iletişim protokolüdür.
+
+* Encoding, Hashing and Encryption:
+  1. Encoding: Convert data onr form to another. Encoding is reversible and using for securing data. Encoding does not use a key or passord
+  2. Hashing: Convert data into a String. Hashing is one way process and not reversible
+  3. Encryption: Encoding data using key or password. Need to key or password to decrypt
+
+* JWT (Json Web Token) Authentication: RFC7519 endüstri standartıdır. JWT has 3 parts that is Header, Payload, Signature. 
+  * Header has 2 part that is type and algorithm. 
+  * ```JSON
+    {
+      "alg": "HS256",
+      "typ": "JWT"
+    }
+    ```
+  * Payload has standard attributes and custom attributes
+  * ```JSON
+    {
+      "sub": "1234568697498",
+      "name": "Murat Karakurt"
+    }
+    ```
+  * Signature includes secret that can be electronic signature
+
+* There are 2 types of Key Encryption:
+  1. Symmetric Key Encryption: Use the same key for the encryption and decryption
+  2. Asymmetric Key Encryption: This encryption has 2 keys that is public key and private key. Encrypt data with public key and decrypt data with private key. ** That is the best practice of encryption **
+
+
