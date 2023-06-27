@@ -120,4 +120,11 @@
   1. Symmetric Key Encryption: Use the same key for the encryption and decryption
   2. Asymmetric Key Encryption: This encryption has 2 keys that is public key and private key. Encrypt data with public key and decrypt data with private key. ** That is the best practice of encryption **
 
-
+* Spring security intercepts all requests. It executes a series of filters called Spring Security Filter Chain.
+* 
+* Authentication Manager: Responsible for authentication. Three parts:
+  * Principal: details about the user
+  * Credentials: username and passwords
+  * Authorities: The roles and authorities that the principal has
+* Authentication Provider: Choose spesific authentication type ( JWT Auth etc. )
+* User Detail Service: Load user data
